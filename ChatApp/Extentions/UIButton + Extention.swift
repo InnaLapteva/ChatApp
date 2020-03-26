@@ -13,9 +13,9 @@ extension UIButton {
     convenience init(backgroundColor: UIColor,
                      titleColor: UIColor,
                      title: String,
-                     cornerDadius: CGFloat,
-                     isShadow: Bool,
-                     font: UIFont) {
+                     cornerDadius: CGFloat = 4,
+                     isShadow: Bool = false,
+                     font: UIFont? = .avenir20()) {
         self.init(type: .system)
         self.setTitle(title, for: .normal)
         self.setTitleColor(titleColor, for: .normal)
