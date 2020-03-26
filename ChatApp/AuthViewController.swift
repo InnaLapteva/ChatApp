@@ -8,8 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class AuthViewController: UIViewController {
+    
+    var button: UIButton = {
+        let button = UIButton()
+        return button
+    }()
+    
+    //let myButton = UIButton(backgroundColor: .white, titleColor: .black, title: "Email", cornerDadius: 10, isShadow: true, font: UIFont()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
@@ -26,9 +34,9 @@ struct ViewControllerProvider: PreviewProvider {
 
 struct ContainerView: UIViewControllerRepresentable {
     
-    let viewController = ViewController()
+    let viewController = AuthViewController()
     
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ContainerView>) -> ViewController {
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ContainerView>) -> AuthViewController {
         return viewController
     }
     func updateUIViewController(_ uiViewController: ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<ContainerView>) {
