@@ -27,6 +27,7 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        googleButton.customizeGoogleButton()
         setUpConstraints()
     }
     
@@ -47,7 +48,7 @@ extension AuthViewController {
            let emailView = ButtonFormView(label: emailleLabel, button: emailButton)
            let loginView = ButtonFormView(label: alreadyOnBoardLabel, button: loginButton)
            
-           let stackView = UIStackView(subviews: [googleView, emailView, loginView],
+        let stackView = UIStackView(arrangedSubviews: [googleView, emailView, loginView],
                                        axis: .vertical,
                                        spacing: 40)
            view.addSubview(stackView)
