@@ -6,7 +6,7 @@
 //  Copyright © 2020 Инна Лаптева. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct MChat: Hashable, Decodable {
     var userName: String

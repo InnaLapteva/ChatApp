@@ -9,19 +9,14 @@
 import UIKit
 
 class ActiveChatCell: UICollectionViewCell, SelfConfigurationCell  {
+    
+    
     static var reuseID: String = "ActiveChatCell"
     
     let friendImageView = UIImageView()
     let friendName = UILabel(text: "User Name", font: .laoSangamMN20())
     let lastMessage = UILabel(text: "How are you?", font: .laoSangamMN18())
     let gradientView = GradientView(from: .topLeading, to: .bottomTrailing, startColor: #colorLiteral(red: 0.7882352941, green: 0.631372549, blue: 0.9411764706, alpha: 1) , endColor: #colorLiteral(red: 0.3333926499, green: 0.6381108165, blue: 0.9452508092, alpha: 1))
-    
-    func configure(with value: MChat) {
-        
-        friendImageView.image = UIImage(named: value.userImageString)
-        friendName.text = value.userName
-        lastMessage.text = value.lastMessage
-    }
     
     override init(frame: CGRect) {
         super.init(frame: frame )
@@ -31,7 +26,12 @@ class ActiveChatCell: UICollectionViewCell, SelfConfigurationCell  {
         self.clipsToBounds = true
     }
     
-    
+    func configure<U>(with value: U) where U : Hashable {
+        guard let chat: MChat = value as? MChat else { return }
+        friendImageView.image = UIImage(named: chat.userImageString)
+               friendName.text = chat.userName
+               lastMessage.text = chat.lastMessage
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

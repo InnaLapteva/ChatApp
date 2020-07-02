@@ -32,7 +32,7 @@ class ListViewController: UIViewController {
         }
     }
     
-    var dataSource: UICollectionViewDiffableDataSource<Section, MChat>?
+  var dataSource: UICollectionViewDiffableDataSource<Section, MChat>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,13 +85,6 @@ class ListViewController: UIViewController {
 }
 //MARK: - composition layout
 extension ListViewController {
-    // функция для конфигурации ячейки
-    private func configureCell<T: SelfConfigurationCell>(cellType: T.Type, with value: MChat, for indexPath: IndexPath) -> T {
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellType.reuseID, for: indexPath) as? T else { fatalError() }
-        cell.configure(with: value)
-        return cell
-    }
     
     private func createDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, MChat> (collectionView: collectionView, cellProvider: { (colectionView, indexPath, chat) -> UICollectionViewCell? in
@@ -100,12 +93,12 @@ extension ListViewController {
             
             switch section {
             case .waitingChats:
-                return self.configureCell(cellType: WaitingChatCell.self, with: chat, for: indexPath)
+                return self.configureCell(collectionView: self.collectionView, cellType: WaitingChatCell.self, with: chat, for: indexPath)
 //                let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "cellid2" , for: indexPath)
 //                cell.backgroundColor = .green
 //                return cell
             case .activeChats:
-                return self.configureCell(cellType: ActiveChatCell.self, with: chat, for: indexPath)
+                return self.configureCell(collectionView: self.collectionView, cellType: ActiveChatCell.self, with: chat, for: indexPath)
             }
         })
         dataSource?.supplementaryViewProvider = {
