@@ -6,23 +6,12 @@
 //  Copyright © 2020 Инна Лаптева. All rights reserved.
 //
 
+
 import UIKit
 
 class GradientView: UIView {
     
     private let gradientLayer = CAGradientLayer()
-  
-   @IBInspectable private var startColor: UIColor? {
-        didSet {
-          setUpGradientColor(startColor: startColor, endColor: endColor)
-        }
-    }
-    
-    @IBInspectable private var endColor: UIColor? {
-        didSet {
-             setUpGradientColor(startColor: startColor, endColor: endColor)
-        }
-    }
     
     enum Point {
         case topLeading
@@ -59,12 +48,25 @@ class GradientView: UIView {
         }
     }
     
-   override init(frame: CGRect) {
-        super.init(frame: frame)
+    @IBInspectable private var startColor: UIColor? {
+        didSet {
+            setupGradientColors(startColor: startColor, endColor: endColor)
+        }
     }
+    
+    @IBInspectable private var endColor: UIColor? {
+        didSet {
+            setupGradientColors(startColor: startColor, endColor: endColor)
+        }
+    }
+    
     init(from: Point, to: Point, startColor: UIColor?, endColor: UIColor?) {
         self.init()
-        setUpGradient(from: from, to: to, startColor: startColor, endColor: endColor)
+        setupGradient(from: from, to: to, startColor: startColor, endColor: endColor)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
     }
     
     override func layoutSubviews() {
@@ -72,24 +74,21 @@ class GradientView: UIView {
         gradientLayer.frame = bounds
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setUpGradient(from: .bottomLeading, to: .topTrailing, startColor: startColor, endColor: endColor)
-    }
-    
-    
-    private func setUpGradient(from: Point, to: Point, startColor: UIColor?, endColor: UIColor?) {
+    private func setupGradient(from: Point, to: Point, startColor: UIColor?, endColor: UIColor?) {
         self.layer.addSublayer(gradientLayer)
-        setUpGradientColor(startColor: startColor, endColor: endColor)
+        setupGradientColors(startColor: startColor, endColor: endColor)
         gradientLayer.startPoint = from.point
         gradientLayer.endPoint = to.point
-        
     }
     
-    private func setUpGradientColor(startColor: UIColor?, endColor: UIColor?) {
+    private func setupGradientColors(startColor: UIColor?, endColor: UIColor?) {
         if let startColor = startColor, let endColor = endColor {
             gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
         }
     }
     
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupGradient(from: .leading, to: .trailing, startColor: startColor, endColor: endColor)
+    }
 }

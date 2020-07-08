@@ -26,6 +26,10 @@
 		01E966AF242B8B7400941200 /* UIButton + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E966AE242B8B7400941200 /* UIButton + Extention.swift */; };
 		01EAE069242DE75A0003D713 /* UIStackView + Extention .swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAE068242DE75A0003D713 /* UIStackView + Extention .swift */; };
 		01EAE06B242DFB190003D713 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAE06A242DFB190003D713 /* LoginViewController.swift */; };
+		01ED9DAE24B466D500AB664A /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ED9DAD24B466D500AB664A /* InsertableTextField.swift */; };
+		01ED9DB024B46E0A00AB664A /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ED9DAF24B46E0A00AB664A /* UIView + Extension.swift */; };
+		01ED9DB224B5796700AB664A /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ED9DB124B5796700AB664A /* ChatRequestViewController.swift */; };
+		01ED9DB424B5895400AB664A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01ED9DB324B5895400AB664A /* GoogleService-Info.plist */; };
 		01FF33922444AFDA00B406B4 /* SetUpProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF33912444AFDA00B406B4 /* SetUpProfileViewController.swift */; };
 		01FF33942444B3CB00B406B4 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF33932444B3CB00B406B4 /* AddPhotoView.swift */; };
 		01FF33962445AC9E00B406B4 /* UISegmentedControl + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF33952445AC9D00B406B4 /* UISegmentedControl + Extention.swift */; };
@@ -66,6 +70,10 @@
 		01E966AE242B8B7400941200 /* UIButton + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extention.swift"; sourceTree = "<group>"; };
 		01EAE068242DE75A0003D713 /* UIStackView + Extention .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extention .swift"; sourceTree = "<group>"; };
 		01EAE06A242DFB190003D713 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		01ED9DAD24B466D500AB664A /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
+		01ED9DAF24B46E0A00AB664A /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		01ED9DB124B5796700AB664A /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
+		01ED9DB324B5895400AB664A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		01FF33912444AFDA00B406B4 /* SetUpProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpProfileViewController.swift; sourceTree = "<group>"; };
 		01FF33932444B3CB00B406B4 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		01FF33952445AC9D00B406B4 /* UISegmentedControl + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl + Extention.swift"; sourceTree = "<group>"; };
@@ -154,6 +162,7 @@
 				01E966A3242B84CB00941200 /* Assets.xcassets */,
 				01E966A5242B84CB00941200 /* LaunchScreen.storyboard */,
 				01E966A8242B84CB00941200 /* Info.plist */,
+				01ED9DB324B5895400AB664A /* GoogleService-Info.plist */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -185,6 +194,7 @@
 				01FF339A2445BA0400B406B4 /* MainTabBarViewController.swift */,
 				01FF339C2445BA4700B406B4 /* PeopleViewController.swift */,
 				01253CB024A5C90300B025C2 /* ProfileViewController.swift */,
+				01ED9DB124B5796700AB664A /* ChatRequestViewController.swift */,
 				01AEC60324A2072F00FF4303 /* Header */,
 			);
 			path = ViewControllers;
@@ -194,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				144DB038242DE04700275CB7 /* OneLineCustomTextField.swift */,
+				01ED9DAD24B466D500AB664A /* InsertableTextField.swift */,
 				14E5D415242CA2EB002CCC2F /* ButtonFormCustomView.swift */,
 				01FF33A2244B6C6900B406B4 /* Bundle - Decodable.swift */,
 				01FF33932444B3CB00B406B4 /* AddPhotoView.swift */,
@@ -211,6 +222,7 @@
 				14E5D410242C9BB4002CCC2F /* UILabel + Extention.swift */,
 				01E966AE242B8B7400941200 /* UIButton + Extention.swift */,
 				01EAE068242DE75A0003D713 /* UIStackView + Extention .swift */,
+				01ED9DAF24B46E0A00AB664A /* UIView + Extension.swift */,
 				01FF33952445AC9D00B406B4 /* UISegmentedControl + Extention.swift */,
 				14E5D412242C9D15002CCC2F /* UIImageView + Extension.swift */,
 				14E5D40B242C94C9002CCC2F /* UIFont + Extention.swift */,
@@ -281,6 +293,7 @@
 				01FF339F244B6BBA00B406B4 /* activeChats.json in Resources */,
 				01E966A4242B84CB00941200 /* Assets.xcassets in Resources */,
 				01FF33A1244B6BC700B406B4 /* waitingChats.json in Resources */,
+				01ED9DB424B5895400AB664A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,15 +314,18 @@
 				01FF33922444AFDA00B406B4 /* SetUpProfileViewController.swift in Sources */,
 				01FF339D2445BA4700B406B4 /* PeopleViewController.swift in Sources */,
 				01FF33962445AC9E00B406B4 /* UISegmentedControl + Extention.swift in Sources */,
+				01ED9DAE24B466D500AB664A /* InsertableTextField.swift in Sources */,
 				01E966AF242B8B7400941200 /* UIButton + Extention.swift in Sources */,
 				01E9669F242B84C600941200 /* AuthViewController.swift in Sources */,
 				01253CB124A5C90300B025C2 /* ProfileViewController.swift in Sources */,
 				01AEC5FC24A1D4AD00FF4303 /* SectionHeader.swift in Sources */,
+				01ED9DB224B5796700AB664A /* ChatRequestViewController.swift in Sources */,
 				01E9669B242B84C600941200 /* AppDelegate.swift in Sources */,
 				01EAE069242DE75A0003D713 /* UIStackView + Extention .swift in Sources */,
 				01FF33942444B3CB00B406B4 /* AddPhotoView.swift in Sources */,
 				144DB039242DE04700275CB7 /* OneLineCustomTextField.swift in Sources */,
 				01FF33A3244B6C6900B406B4 /* Bundle - Decodable.swift in Sources */,
+				01ED9DB024B46E0A00AB664A /* UIView + Extension.swift in Sources */,
 				14E5D413242C9D15002CCC2F /* UIImageView + Extension.swift in Sources */,
 				01AEC60224A201D100FF4303 /* MUser.swift in Sources */,
 				01253CAD24A22C5500B025C2 /* UserCell.swift in Sources */,
